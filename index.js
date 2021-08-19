@@ -17,7 +17,7 @@ function initialize() {
     var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
     console.log(map);
-    var srcImage = "map_overlay_smaller.png";
+    var srcImage = "map_overlay.png";
 
     overlay = new DebugOverlay(bounds, srcImage, map);
 
