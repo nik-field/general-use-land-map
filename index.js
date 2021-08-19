@@ -4,8 +4,8 @@ DebugOverlay.prototype = new google.maps.OverlayView();
 
 function initialize() {
     var mapOptions = {
-        zoom: 18,
-        center: new google.maps.LatLng(45.2, -76.5),
+        zoom: 12,
+        center: new google.maps.LatLng(45.294783, -76.56585),
     };
 
     var map = new google.maps.Map(
@@ -17,7 +17,7 @@ function initialize() {
     var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
     console.log(map);
-    var srcImage = "http://127.0.0.1:5500/map_overlay.png";
+    var srcImage = "http://127.0.0.1:5500/map_overlay_smaller.png";
 
     overlay = new DebugOverlay(bounds, srcImage, map);
 
@@ -81,7 +81,6 @@ DebugOverlay.prototype.onAdd = function() {
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.opacity = "0.5";
-    img.style.blendMode = "Overlay";
     img.style.position = "absolute";
     div.appendChild(img);
     this.div_ = div;
