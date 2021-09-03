@@ -12,12 +12,15 @@ function initialize() {
         document.getElementById("map-canvas"),
         mapOptions
     );
-    var swBound = new google.maps.LatLng(45.17013888888889, -76.88273333333333);
-    var neBound = new google.maps.LatLng(45.42063611111111, -76.27168888888889);
+    var sphericalMercCoords = [-8582458.750796549, 5641381.965032898, -8512136.684774283,
+        5681005.009570172,
+    ];
+    var swBound = new google.maps.LatLng(45.12601583619904, -77.09753871165883);
+    var neBound = new google.maps.LatLng(45.376596373606105, -76.4658248444722);
     var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
     console.log(map);
-    var srcImage = "map_overlay.png";
+    var srcImage = "map_overlay_2-transparent.png";
 
     overlay = new DebugOverlay(bounds, srcImage, map);
 
